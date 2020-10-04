@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Music Genres Finder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+      .calculateButton {
+            text-align: center;
+            border: 3px solid green;
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin-left:auto;
+            margin-right: auto;
+        }
+
+        .submitButton {
+            text-align: center;
+            background-color: honeydew;
+            border: none;
+            
+            padding: 15px 32px;
+            text-align: center;
+            
+            display: block;
+            font-size: 16px;
+            margin-left:auto;
+            margin-right: auto;
+        }
+
+        .col-sm-6 col-md-6 col-lg-8{
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    
+  </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div id="briefing">
+            <h1>My Music Genres Finder</h1>
+            <p>This is a web application calculating your favorite genre based on the music you like. Main purpose is representing data from Deezer API.</p>
+            
+        </div>
+    </div>
+    
+
+<div class="container-fluid">
+    
+    
+    <div class="row">
+        <div id="optionOne" class="col-sm-6 col-md-6 col-lg-6" style="background-color:rgb(204, 199, 200);">
+            <h3>Start Your Search Now</h3>
+                        <p>Do you know the name of the song? If yes, please enter: <input required type='text' id='optionOneSongName'></p>
+                        <p>Do you know the name of the artist? If yes, please enter here:<input required type='text' id='optionOneArtistName' placeholder="Please ensure spelling." size='30'></p>
+                        <p>Note: If you don't know the artist, sorry that we can't search...</p> 
+                        <button type="submit" id='submitButton' class='submitButton'>Submit</button>
+                        <p>--------------------------------------------------------------------------------------</p>
+        </div>
+
+        <div id="optiontOneResult" class="col-sm-6 col-md-6 col-lg-6" style="background-color:rgb(204, 199, 200);">
+            <div>
+                <table id='userTable' align="center" border="1" cellspacing=0 cellpadding=5>
+                    <thead>
+                        <tr>
+                            <th>Song</th>
+                            <th>Artist</th>
+                            <th>Album ID</th>
+                            <th>Action</th>
+                            <th>Genres</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nonstop</td>
+                            <td>Drake</td>
+                            <td>69319552</td>
+                            <td><button type="button" class="addButton">Find Genres</button></td>
+                            <td></td>
+                        </tr>  
+                        <tr>
+                            <td>Biking</td>
+                            <td>Frank Ocean</td>
+                            <td>104660182</td>
+                            <td><button type="button" class="addButton">Find Genres</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Why</td>
+                            <td>Shawn Mendes</td>
+                            <td>64341122</td>
+                            <td><button type="button" class="addButton">Find Genres</button></td>
+                            <td></td>
+                        </tr>    
+                        <tr>
+                            <td>Any Song</td>
+                            <td>Zico</td>
+                            <td>126558992</td>
+                            <td><button type="button" class="addButton">Find Genres</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>One Day</td>
+                            <td>Kodaline</td>
+                            <td>6637150</td>
+                            <td><button type="button" class="addButton">Find Genres</button></td>
+                            <td></td>
+                        </tr> 
+                        <tr>
+                            <td>Right Here</td>
+                            <td>Justin Bieber</td>
+                            <td>3602971</td>
+                            <td><button type="button" class="addButton">Find Genres</button></td>
+                            <td></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" class="calculateButton" id="calculateButton">Calculate Your Genres Result</button>
+            <p>Please don't click this button until you complete your tracks list.</p>
+            <p>After adding a track or a genre type to this table, results will be re-calculated if you press the green button again.</p>
+
+            
+
+        </div>
+    </div>
+</div>
+        
+<div class="container-fluid">
+
+        <div class="row">
+
+            <div  class="col-sm-6 col-md-6 col-lg-6" style="background-color:rgb(247, 218, 225);">
+                <h1>Result: </h1>
+                <div id="result">
+                    
+                    
+                </div>
+            </div>
+                
+            
+        </div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="./js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sugar/1.4.1/sugar.min.js"></script>
+</body>
+</html>
